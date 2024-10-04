@@ -1,0 +1,24 @@
+<!--custom progress bar adapted from https://stackoverflow.com/questions/16893209/how-to-customize-a-progress-bar-in-android by users user2446474 and Martijn Pieters accessed on 12/04/2021-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Define the background properties like color etc -->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid
+                android:color="@color/grey"
+                />
+        </shape>
+    </item>
+
+    <!-- Define the progress properties like start color, end color etc -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="@color/candy_red"
+                    android:endColor="@color/other_red"
+                    />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

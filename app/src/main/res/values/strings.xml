@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Race Hub</string>
+    <string name="next_race_title_text_view">Next Race:</string>
+    <string name="season_progress_text_view">Season Progress:</string>
+    <string name="last_race_results_text_view">Last Race Results:</string>
+    <string name="driver_standings_text_view">Driver Standings:</string>
+    <string name="constructor_standings_text_view">Constructor Standings:</string>
+    <string name="upcoming_races">Upcoming Races:</string>
+    <string name="next_race_location">Next Race Location:</string>
+    <string name="error_text_not_found">Error - Text not found</string>
+    <string name="welcome_to_racehub">Welcome to RaceHub!</string>
+    <string name="tap">Tap:</string>
+    <string name="tap_tutorial">Tap on any constructor or driver to bring up their profile for more details on them.</string>
+    <string name="longtap">Long Tap</string>
+    <string name="longtap_tutorial">Long hold on drivers or constructor to link to their Instagram page.</string>
+    <string name="general_tutorial">The home page shows you all the important data you need to keep up with the current F1 season. The calendar view shows you the dates for all the upcoming races in the season and shows you a birds eye view of the next circuit.</string>
+    <string name="close">Close</string>
+    <string name="show_map">Show Map?</string>
+    <string name="home">Home</string>
+    <string name="calendar">Calendar</string>
+    <string name="favourites">Favourites</string>
+</resources>

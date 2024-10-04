@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--automatic text size from https://stackoverflow.com/questions/5033012/auto-scale-textview-text-to-fit-within-bounds by users Think Twice Code Once and john-salib-->
+
+    <TextView
+        android:id="@+id/season_progress_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.03"
+        android:background="@color/faded_red"
+        android:text="@string/season_progress_text_view"
+
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="2sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/season_progress_bar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/season_progress_text_view" />
+
+    <TextView
+        android:id="@+id/next_race_title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.03"
+
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="2sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+
+
+        android:background="@color/faded_red"
+        android:text="@string/next_race_title_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/season_progress_bar" />
+
+    <TextView
+        android:id="@+id/next_race_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="30sp"
+        android:gravity="center"
+
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="5sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_race_title_text_view" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_race_text_view" />
+
+    <TextView
+        android:id="@+id/last_race_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.03"
+        android:background="@color/faded_red"
+        android:text="@string/last_race_results_text_view"
+
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="2sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <ListView
+        android:id="@+id/last_race"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_race_text_view" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_race" />
+
+
+    <TextView
+        android:id="@+id/driver_standings_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.03"
+        android:background="@color/faded_red"
+        android:text="@string/driver_standings_text_view"
+
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="2sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <ListView
+        android:id="@+id/driver_standings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driver_standings_text_view" />
+
+    <View
+        android:id="@+id/view14"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driver_standings"  />
+
+    <TextView
+        android:id="@+id/constructor_standings_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.03"
+        android:background="@color/faded_red"
+        android:text="@string/constructor_standings_text_view"
+
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="2sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view14"  />
+
+    <ListView
+        android:id="@+id/constructor_standings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constructor_standings_text_view"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constructor_standings"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
